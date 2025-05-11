@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>编辑学生信息</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>编辑学生信息</h1>
+<form th:action="@{/admin/edit-student/{id}(id=${student.id})}" method="post">
+    <input type="text" th:field="${student.name}" placeholder="姓名" required>
+    <select th:field="${student.gender}" required>
+        <option value="MALE">男</option>
+        <option value="FEMALE">女</option>
+    </select>
+    <input type="number" th:field="${student.age}" placeholder="年龄" min="10" max="50" required>
+    <input type="text" th:field="${student.className}" placeholder="班级" required>
+    <input type="email" th:field="${student.email}" placeholder="邮箱" required>
+    <input type="tel" th:field="${student.phone}" placeholder="电话号码" pattern="[0-9]{11}" required>
+    <button type="submit">保存修改</button>
+</form>
+<a th:href="@{/admin/dashboard}">返回仪表盘</a>
+</body>
+</html>

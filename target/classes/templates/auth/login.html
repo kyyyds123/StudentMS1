@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="login-container">
+    <h2>用户登录</h2>
+    <!-- 退出成功提示 -->
+    <div th:if="${param.logout}" class="alert alert-success">
+        您已成功退出系统！
+    </div>
+    <!-- 登录表单 -->
+    <form th:action="@{/auth/login}" method="post">
+        <input type="text" name="username" placeholder="用户名" required>
+        <input type="password" name="password" placeholder="密码" required>
+        <button type="submit">登录</button>
+    </form>
+    <a th:href="@{/auth/register}">注册新账号</a>
+</div>
+</body>
+</html>
