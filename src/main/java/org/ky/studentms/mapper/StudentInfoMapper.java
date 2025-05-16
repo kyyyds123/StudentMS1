@@ -1,7 +1,7 @@
-package org.example.studentms.mapper;
+package org.ky.studentms.mapper;
 
 import org.apache.ibatis.annotations.*;
-import org.example.studentms.entity.StudentInfo;
+import org.ky.studentms.entity.StudentInfo;
 
 import java.util.List;
 
@@ -17,8 +17,8 @@ public interface StudentInfoMapper {
     @Select("SELECT * FROM student_info WHERE user_id = #{userId}")
     StudentInfo findByUserId(Integer userId);
 
-    @Update("UPDATE student_info SET name=#{name}, gender=#{gender}, age=#{age}, " +
-            "class_name=#{className}, email=#{email}, phone=#{phone} WHERE id=#{id}")
+    @Update("UPDATE student_info SET  " +
+            "email=#{email}, phone=#{phone} WHERE id=#{id}")
     void updateStudentInfo(StudentInfo studentInfo);
 
     @Delete("DELETE FROM student_info WHERE id = #{studentId}")

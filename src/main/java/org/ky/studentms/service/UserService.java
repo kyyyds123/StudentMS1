@@ -1,8 +1,8 @@
-package org.example.studentms.service;
+package org.ky.studentms.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.studentms.entity.User;
-import org.example.studentms.mapper.UserMapper;
+import org.ky.studentms.entity.User;
+import org.ky.studentms.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
 @Service

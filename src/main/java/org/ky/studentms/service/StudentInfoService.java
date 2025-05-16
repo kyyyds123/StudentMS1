@@ -1,9 +1,9 @@
-package org.example.studentms.service;
+package org.ky.studentms.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.studentms.entity.StudentInfo;
-import org.example.studentms.mapper.StudentInfoMapper;
-import org.example.studentms.mapper.UserMapper;
+import org.ky.studentms.entity.StudentInfo;
+import org.ky.studentms.mapper.StudentInfoMapper;
+import org.ky.studentms.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

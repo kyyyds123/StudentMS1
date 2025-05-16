@@ -1,4 +1,4 @@
-package org.example.studentms.entity;
+package org.ky.studentms.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

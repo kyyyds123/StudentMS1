@@ -79,7 +79,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>org.example.studentms.StudentMsApplication</mainClass>
+                    <mainClass>org.ky.studentms.StudentMsApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

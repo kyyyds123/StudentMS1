@@ -1,4 +1,4 @@
-package org.example.studentms;
+package org.ky.studentms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

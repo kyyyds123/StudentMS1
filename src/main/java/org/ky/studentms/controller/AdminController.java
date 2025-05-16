@@ -1,10 +1,10 @@
-package org.example.studentms.controller;
+package org.ky.studentms.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.studentms.entity.StudentInfo;
-import org.example.studentms.entity.User;
-import org.example.studentms.service.StudentInfoService;
-import org.example.studentms.service.UserService;
+import org.ky.studentms.entity.StudentInfo;
+import org.ky.studentms.entity.User;
+import org.ky.studentms.service.StudentInfoService;
+import org.ky.studentms.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

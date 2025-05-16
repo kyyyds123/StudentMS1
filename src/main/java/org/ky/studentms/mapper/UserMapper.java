@@ -1,7 +1,7 @@
-package org.example.studentms.mapper;
+package org.ky.studentms.mapper;
 
 import org.apache.ibatis.annotations.*;
-import org.example.studentms.entity.User;
+import org.ky.studentms.entity.User;
 
 @Mapper
 public interface UserMapper {

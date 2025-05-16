@@ -1,15 +1,14 @@
-package org.example.studentms.controller;
+package org.ky.studentms.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.studentms.entity.StudentInfo;
-import org.example.studentms.entity.User;
-import org.example.studentms.service.StudentInfoService;
+import org.ky.studentms.entity.StudentInfo;
+import org.ky.studentms.entity.User;
+import org.ky.studentms.service.StudentInfoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -30,7 +29,7 @@ public class StudentController {
         return "student/profile";
     }
 
-    @PostMapping("/update-profile")
+    @PostMapping("/update-profile/{id}")
     public String updateProfile(
             @Validated StudentInfo student,
             BindingResult result,
@@ -38,10 +37,14 @@ public class StudentController {
     ) {
         if (result.hasErrors()) {
             redirectAttributes.addFlashAttribute("error", "数据格式错误！");
+
             return "redirect:/student/profile";
         }
+        System.out.println("yes");
         studentInfoService.updateStudent(student);
+        System.out.println("123");
         redirectAttributes.addFlashAttribute("success", "信息更新成功！");
+        System.out.println(student.getId());
         return "redirect:/student/profile";
     }
 }

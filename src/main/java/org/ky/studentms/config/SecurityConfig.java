@@ -1,4 +1,4 @@
-package org.example.studentms.config;
+package org.ky.studentms.config;
 
 
 import org.springframework.context.annotation.Configuration;
