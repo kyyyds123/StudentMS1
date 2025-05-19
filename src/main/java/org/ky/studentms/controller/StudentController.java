@@ -40,9 +40,7 @@ public class StudentController {
 
             return "redirect:/student/profile";
         }
-        System.out.println("yes");
         studentInfoService.updateStudent(student);
-        System.out.println("123");
         redirectAttributes.addFlashAttribute("success", "信息更新成功！");
         System.out.println(student.getId());
         return "redirect:/student/profile";
